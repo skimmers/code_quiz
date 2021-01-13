@@ -1,5 +1,6 @@
 h1 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Potta One', cursive;
     text-align: center;
 }
 ul {
@@ -24,24 +25,21 @@ p {
     width: 75%;
     margin: auto;
     padding-top: 5px;
-    /*-moz-box-shadow: 10px 10px 5px #888;
-    -webkit-box-shadow: 10px 10px 5px #888;
-    box-shadow: 10px 10px 5px #888;*/
     position: relative;
 }
-.quizcontainer #quiz1
+
+.quizcontainer #quiz
 {
-text-shadow:1px 1px 2px orange;
-font-family:"Georgia", Arial, sans-serif;
+    text-shadow:1px 1px 2px orange;
+    font-family:"Georgia", Arial, sans-serif;
 }
+
 .nextButton {
     box-shadow: 3px 3px 5px #888;
     border-radius: 6px;
-   /* width: 150px;*/
     height: 40px;
     text-align: center;
     background-color: lightgrey;
-    /*clear: both;*/
     color: red;
     font-family:'Gabriola', serif;
     position: relative;
@@ -53,14 +51,12 @@ font-family:"Georgia", Arial, sans-serif;
 	right:30%;
 }
 
-.preButton {
+.prevBtn {
     box-shadow: 3px 3px 5px #888;
     border-radius: 6px;
-    /*width: 150px;*/
     height: 40px;
     text-align: center;
     background-color: lightgrey;
-    /*clear: both;*/
     color: red;
     font-family:'Gabriola', serif;
     position: relative;
@@ -98,7 +94,7 @@ font-family:"Georgia", Arial, sans-serif;
 	top:80%;
 	left:40%;
 }
-.choiceList {
+.answerChoices {
     font-family: 'Arial', serif;
     color: #ed12cd;
 	font-size:15px;
