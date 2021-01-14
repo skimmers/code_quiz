@@ -2,7 +2,7 @@ var questions = [
     {
         title: "What does HTML stand for?",
         choices: ["Hype TV Man Living", "Hypertext Makup Language", "Hyper Texting Mail Language"],
-        answer: "Hypertext Markup Language",
+        answer: "Hypertext Makup Language",
     },
     {
         title: "What does CSS stand for?",
