@@ -1,13 +1,15 @@
 var question = document.getElementById("question");
-var answerChoices = document.getElementById("answerChoices");
+var answerChoices = Array.from(document.getElementsByClassName("answerChoices-text"));
 var scoreText = document.getElementById("score");
+var quizCounterText = document.getElementById("questionCounter");
 var viewQuestion = {};
-var chosenAnswer = {};
+var chosenAnswer = true;
 var score = 0;
+var questionCounter = 0;
 var allQuestions = [];
 var time = 30;
 
-var allQuestions = [
+var questions = [
     {
         question: "What does HTML stand for?",
         choice1: "Hype TV Man Lives",
@@ -33,4 +35,37 @@ var allQuestions = [
         answer: 3,
     }
 
-]
+];
+
+var all_Questions = 3;
+
+function quizStart () {
+    questionCounter = 0;
+    score = 0;
+    allQuestions = [...questions];
+    getNewQuestion();
+}
+
+getNewQuestion = () => {
+    if (allQuestions.length === 0 || questionCounter <= all_Questions){
+        localStorage.setItem('scoreKeeper', score);
+        localStorage.setItem('timeKeeper', time);
+        return window.location.assign("end html");
+    }
+    
+    questionCounter++;
+    quizCounterText.innerText = questionCounter + "/" + all_questions;
+    var questionIndex = Math.floor(Math.random() * allQuestions.length);
+    viewQuestion = allQuestions[questionIndex];
+    question.innerText = viewQuestion.question;
+
+    answerChoices.forEach(choice => {
+    var number = choice.dataset["number"];
+    choice.innerText = currentQuestion["choice" + number];
+  });
+
+    allQuestions.splice(questionIndex, 1);
+    
+    chosenAnswer = true;
+
+}; 
