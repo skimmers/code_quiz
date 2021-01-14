@@ -1,3 +1,5 @@
+
+/* These are all my varaibles */
 var question = document.getElementById("question");
 var answerChoices = Array.from(document.getElementsByClassName("answerChoices-text"));
 var scoreText = document.getElementById("score");
@@ -69,3 +71,51 @@ getNewQuestion = () => {
     chosenAnswer = true;
 
 }; 
+
+answerChoices.forEach(choice => {
+    choice.addEventListener("click", e => {
+        if (!chosenAnswer) return;
+
+        chosenAnswer = false;
+        var selectedChoice = e.target;
+        var selectedAnswer = selectedChoice.dataset["number"];
+
+        var classToApply = "incorrect";
+        if (selectedAnswer === chosenAnswer.answer) {
+            classToApply = "correct";
+        }
+
+        if(classToApply === "incorrect"){
+            scoreDown();
+        }
+
+        selectedChoice.parentElement.classList.add(classToApply);
+
+        setTimeout(() => {
+          selectedChoice.parentElement.classList.remove(classToApply);
+          getNewQuestion();
+        }, 1000);
+    })
+})
+
+decrementTime = () => {
+    time = time - 1;
+    if (time < 30) {
+      timer.innerHTML = time;
+    }
+    if (time < 1) {
+      return window.location.assign("index.html");  
+    }
+  }
+  update = setInterval("decrementTime()", 1000)
+  
+  incrementScore = num => {
+    score += num;
+    scoreText.innerText = score;
+  };
+  
+  scoreDown = () => {
+      time = time - 3; 
+  }
+  
+  startGame();
