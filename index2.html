@@ -13,7 +13,7 @@
     <title>Code Quiz</title>
 </head>
 <body>
-    <!-- Creating a Navbar-->
+    <!-- Creating a Navbar with Leaderboard and Timer-->
     <nav class = "navbar navbar-inverse">
         <div class = "container-fluid">
             <div class = "navbar-header">
@@ -25,5 +25,30 @@
         </div>
     </nav>
     
+    <!--Creating a Container that holds all of our Questions and Answers-->
+    <div class = "container">
+        <div calss = "row">
+            <div class="col-md-12 col-lg-10" id="master-div">
+                <h2 id = "question"></h2>
+                <!--These are the buttons for the answers-->
+                <div id = "answers">
+                    <button type = "button" class = "btn btn-dark" id="answer1"></button>
+                    <button type = "button" class = "btn btn-dark" id="answer2"></button>
+                    <button type = "button" class = "btn btn-dark" id="answer3"></button>
+                </div>
+                <div id="message">
+                    <h1>Code Quiz</h1>
+                    <p>This is a coding quiz!
+                        <br> You will have 180 seconds (3 mins) to answer all the questions.
+                        <br> Any wrong answers will take away time. 
+                    </p>
+                </div>
+            </div>
+
+            <!--This is the Start Button-->
+            <div class = "col-xs-12 col-sm-8 cold-md-6" id ="buttonDiv"> <button type= "button" class = "btn btn-dark" id ="startBtn">Start!</button></div>
+        
+        </div>
+    </div>
 </body>
 </html>
