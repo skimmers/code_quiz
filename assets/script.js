@@ -1,4 +1,3 @@
-
 /* These are all my varaibles */
 var question = document.getElementById("question");
 var answerChoices = Array.from(document.getElementsByClassName("answerChoices-text"));
