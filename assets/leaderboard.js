@@ -1,6 +1,4 @@
-var highScoreList = document.querySelector("#highScores");
-var backBtn = document.querySelector("#go-back");
-var clearScores = document.querySelector("#clear-highscores");
+var highScoreList = document.querySelector("#leaderboardTable");
 
 initScores();
 
@@ -35,7 +33,7 @@ function renderScores() {
             var scoreCellNum = document.createTextNode(scoreListItem.newScore);
 
             tr.setAttribute("tr-index", i);
-            document.getElementById("highScores").appendChild(tr);
+            document.getElementById("leaderboardTable").appendChild(tr);
             tr.appendChild(nameCell);
             nameCell.appendChild(nameCellText);
             tr.appendChild(scoreCell);
@@ -44,11 +42,3 @@ function renderScores() {
         }
     }
 }
-
-clearScores.addEventListener("click", function () {
-    clearAll();
-    window.location.href = "leaderboard.html";
-})
-backButton.addEventListener("click", function () {
-    window.location.href = "index.html";
-})
