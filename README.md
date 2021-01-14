@@ -14,6 +14,12 @@ These are the requirements I had to meet:
 
 ![MinimunRequirements](./assets/requirements.png)
 
+## My Quiz
+
+Please see a demonstration of my quiz
+
+![Demonstration](./assets/demonstration.gif)
+
 # Purpose
 
 I believe the purpose of this assignment was to test my abilities in CSS, HTML and JavaScript. It was a good exercise to see how all the languages connected and worked together to create a product. 
