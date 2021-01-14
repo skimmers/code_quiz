@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--These link to the fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- Link to styles sheet-->
+    <link rel="stylesheet" href="./assets/styles2.css" />
+    <title>Leader Board</title>
+</head>
+
+<!-- Created Navbar to have an option to retake the quiz-->
+<body>
+    <nav class = "navbar navbar-inverse">
+        <div class = "container-fluid">
+            <div class = "navbar-header">
+                <a class = "navbar-brand" id="leaderboard-link" href= "index2.html"> Start Quiz!</a>
+            </div>
+        </div>
+    </nav>
+
+    <!--Container to hold our leaderboard content-->
+    <div class = "container">
+        <div class = "row"> 
+            <div class = "col=md-12 col-lg-10 col-xl-8" id = "leaderboard-div">
+                <h2>Leader Board</h2>
+                <table id = "leaderboardTable"></table>
+                <button id = "go-back">Go Back</button>
+                <button id = "clear-leaderBoard">Clear Leader Board</button>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/leaderboard.js"></script>
+</body>
+</html>
