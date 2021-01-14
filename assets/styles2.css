@@ -11,10 +11,15 @@
     }
     
     #master-div {
-        text-align: -webkit-center;
+        text-align: center;
     }
 
+    
     #buttonDiv{
+        text-align: center;
+    }
+
+    #startBtn{
         text-align: center;
     }
 
