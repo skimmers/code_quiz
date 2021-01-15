@@ -4,6 +4,7 @@
 
     #leaderboard-link{
         color: black;
+        text-align: center;
     }
 
     #question {
@@ -14,6 +15,13 @@
         text-align: center;
     }
 
+    #leaderboard-div{
+        text-align: center;
+    }
+
+    #leaderboardTable{
+        text-align: center;
+    }
     
     #buttonDiv{
         text-align: center;
